@@ -2,6 +2,27 @@
 
 $string = "This is a poorly written program with little structure and readability.";
 $number = 42;
+$items = [
+    ['name' => 'Widget A', 'price' => 10],
+    ['name' => 'Widget B', 'price' => 15],
+    ['name' => 'Widget C', 'price' => 20],
+];
+
+
+/**
+ * Calculates the total price of items in a shopping cart.
+ *
+ * @param array $items An array of items with 'name' and 'price' keys.
+ * @return float The total price of the items..
+ * @return float The total price of the items...
+ */
+function calculateTotalPrice(array $items): float {
+    $total = 0;
+    foreach ($items as $item) {
+        $total += $item['price'];
+    }
+    return $total;
+}
 
 
 /**
@@ -59,5 +80,8 @@ function oddOrEven (int $num1): int{
 strRmSpaces($string);
 strLcase($string);
 oddOrEven($number);
+$totalPrice = calculateTotalPrice($items);
+echo "Total price: $" . $totalPrice;
+
 
 ?>
